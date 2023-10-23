@@ -32,7 +32,7 @@ const PollTable = () => {
             <IconButton
               onClick={() => history.push(`/poll/?id=${data[dataIndex]._id}`)}
             >
-              <HowToVote color="primary" />
+              <HowToVote style={{color:'#a52a2a'}} />
             </IconButton>
           );
         },
@@ -49,7 +49,7 @@ const PollTable = () => {
                 history.push(`/results/?id=${data[dataIndex]._id}`)
               }
             >
-              <Poll color="primary" />
+              <Poll style={{color:'#a52a2a'}} />
             </IconButton>
           );
         },

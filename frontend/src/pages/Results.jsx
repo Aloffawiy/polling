@@ -45,7 +45,7 @@ const Results = () => {
     datasets: [
       {
         label: "Votes recorded",
-        backgroundColor: ["#c8f888", "#86df11", "#01f70d", "#066d06f3"],
+        backgroundColor: ["blue", "green", "red", "black"],
         data: votes,
       },
     ],
@@ -65,7 +65,7 @@ const Results = () => {
               <Button
             
                 variant="outlined"
-                style={{ margin: "1.5em", backgroundColor:'#0b910b', color:'white' }}
+                style={{ margin: "1.5em", backgroundColor:'white', color:'#a52a2a' }}
                 startIcon={<ArrowBackIos />}
               >
                 Go Back

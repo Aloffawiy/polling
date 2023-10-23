@@ -65,16 +65,16 @@ const CastPoll = () => {
     < >
       {loading ? (
         <center style={{ margin: "5em" }}>
-          <CircularProgress />
+          <CircularProgress  />
         </center>
       ) : (
         <>
           <Grid container justify="center">
             <Link to="/" style={{ color: "whitesmoke", textDecoration: "none" }}>
               <Button
-                color="secondary"
+              
                 variant="outlined"
-                style={{ marginTop: "1.5em" }}
+                style={{ marginTop: "1.5em",color:'#a52a2a',backgroundColor:'white' }}
                 startIcon={<ArrowBackIos />}
               >
                 Go Back
@@ -93,17 +93,17 @@ const CastPoll = () => {
                 <CardContent >
                   <Typography
                     variant="overline"
-                    color="secondary"
-                    style={{ fontSize: "1.25em" }}
+                    
+                    style={{ fontSize: "1.25em",color:'#a52a2a',backgroundColor:'white'}}
                   >
-                    <b>{pollData.pollName}</b>
+                    <b >{pollData.pollName}</b>
                   </Typography>
-                  <Typography color="primary">{pollData.question}</Typography>
-                  <RadioGroup aria-label="options" name="radio-buttons-group">
+                  <Typography style={{ color:'#a52a2a'}} >{pollData.question}</Typography>
+                  <RadioGroup   aria-label="options" name="radio-buttons-group">
                     {pollData.options.map((element, index) => (
                       <FormControlLabel
                         value={"" + element.id}
-                        control={<Radio color="primary" />}
+                        control={<Radio style={{ color:'#a52a2a'}} />}
                         label={element.title}
                         onChange={(e) => setOption(e.target.value)}
                         key={index}
@@ -117,7 +117,7 @@ const CastPoll = () => {
                   disabled={option === null}
                   variant="contained"
                   onClick={submitPoll}
-                  style={{ marginTop: "1em", marginBottom: "1em" }}
+                  style={{ marginTop: "1em", marginBottom: "1em",color:'white', backgroundColor:'#a52a2a'}}
                   startIcon={<Send />}
                   fullWidth
                 >
@@ -135,11 +135,11 @@ const CastPoll = () => {
             </DialogContent>
             <DialogActions>
               <Button
-                color="primary"
+            
                 variant="contained"
                 onClick={handleClose}
                 autoFocus
-                style={{ marginRight: "1em", marginBottom: "1em" }}
+                style={{ marginRight: "1em", marginBottom: "1em",backgroundColor:'#a52a2a' }}
               >
                 OK
               </Button>

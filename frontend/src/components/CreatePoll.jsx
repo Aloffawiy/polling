@@ -82,7 +82,7 @@ const CreatePoll = () => {
       <Grid item>
         <Button
           variant="contained"
-          style={{ color: "#fff", backgroundColor:"#0b910b"}}
+          style={{ color: "#a52a2a", backgroundColor:'#fff'}}
           onClick={handleClickOpen}
         >
           Create Poll
@@ -111,7 +111,7 @@ const CreatePoll = () => {
               <Grid item lg={10} xs={11}>
                 <TextField
                   autoFocus
-                  margin="dense"
+                  margin="dens"
                   id="question"
                   label="Question"
                   type="text"
@@ -119,7 +119,8 @@ const CreatePoll = () => {
                   variant="standard"
                   value={question}
                   onChange={(e) => setQuestion(e.target.value)}
-                  required
+                  required 
+
                 />
               </Grid>
               {_.times(count, (index) => {
@@ -139,6 +140,7 @@ const CreatePoll = () => {
                           let tempArr = [...options];
                           tempArr[index] = { title: e.target.value, votes: 0 };
                           setOptions(tempArr);
+                          
                         }}
                       />
                     </Grid>
@@ -147,7 +149,7 @@ const CreatePoll = () => {
                         style={{ marginTop: "0.25em" }}
                         onClick={addCount}
                       >
-                        <AddCircle color="primary" />
+                        <AddCircle style={{color:'#a52a2a'}} />
                       </IconButton>
                     </Grid>
                     {index !== 0 && (
@@ -156,7 +158,7 @@ const CreatePoll = () => {
                           style={{ marginTop: "0.25em" }}
                           onClick={() => deleteCount(index)}
                         >
-                          <IndeterminateCheckBox color="secondary" />
+                          <IndeterminateCheckBox style={{color:'#a52a2a'}}  />
                         </IconButton>
                       </Grid>
                     )}
@@ -168,12 +170,12 @@ const CreatePoll = () => {
           <DialogActions>
             <Button
               onClick={handleClose}
-              color="secondary"
+              style={{color:'red'}}
               startIcon={<Close />}
             >
               Cancel
             </Button>
-            <Button color="primary"  endIcon={<Create />} onClick={submitPoll}>
+            <Button style={{color:'green'}} endIcon={<Create />} onClick={submitPoll}>
               Create
             </Button>
           </DialogActions>
